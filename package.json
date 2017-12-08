@@ -1,0 +1,27 @@
+{
+  "name": "elnath-real-estate-listings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "listingData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IcusFMagni/elnath-real-estate-listings.git"
+  },
+  "author": "Danika Ragnhild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IcusFMagni/elnath-real-estate-listings/issues"
+  },
+  "homepage": "https://github.com/IcusFMagni/elnath-real-estate-listings#readme",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6"
+  }
+}
