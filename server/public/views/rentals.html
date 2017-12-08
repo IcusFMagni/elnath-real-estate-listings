@@ -1,0 +1,29 @@
+<h2>FOR RENT</h2>
+<table class="table table-hover" >
+    <thead>
+        <tr>
+            <th>
+                Rent per Year
+            </th>
+            <th>
+                Square Footage
+            </th>
+            <th>
+                Location
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr ng-repeat="apt in vm.rentals.list">
+            <th>
+                ${{apt.rent}}
+            </th>
+            <th>
+                {{apt.sqft}}sqft
+            </th>
+            <th>
+                {{apt.city}}
+            </th>
+        </tr>
+    </tbody>
+</table>
