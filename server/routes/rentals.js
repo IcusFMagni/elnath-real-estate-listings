@@ -1,10 +1,10 @@
 var express = require('express')
 var router = express.Router();
-var Rentals = require('../models/rentals.schema')
+var Rental = require('../models/rentals.schema')
 
 router.get('/', function (req, res){
     console.log('in get rentals from route');
-    Rentals.find({}, function(errorMakingDatabaseQuery, data){
+    Rental.find({}, function(errorMakingDatabaseQuery, data){
         if (errorMakingDatabaseQuery){
             console.log('error with find', errorMakingDatabaseQuery);
             res.sendStatus(500);
@@ -15,5 +15,18 @@ router.get('/', function (req, res){
     });
 });
 
+router.post('/', function (req, res) {
+    console.log('/')
+    var rentalToAdd = new Rental (req.body);
+    rentalToAdd.save(function(errorMakingDatabaseQuery,data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(201);
+        }
+
+    });
+});    
 
 module.exports = router;
