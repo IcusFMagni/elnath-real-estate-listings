@@ -1,0 +1,29 @@
+<h2>FOR SALE</h2>
+<table class="table table-hover" >
+    <thead>
+        <tr>
+            <th>
+                Cost
+            </th>
+            <th>
+                Square Footage
+            </th>
+            <th>
+                Location
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr ng-repeat="home in vm.listings.list">
+            <th>
+                ${{home.cost}}
+            </th>
+            <th>
+                {{home.sqft}}sqft
+            </th>
+            <th>
+                {{home.city}}
+            </th>
+        </tr>
+    </tbody>
+</table>

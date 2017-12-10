@@ -1,0 +1,19 @@
+{{vm.newListing}}
+<h3>What type of listing would you like to create?</h3>
+<button ng-click="vm.listingTypeChange('listings')">Property</button>
+<button ng-click="vm.listingTypeChange('rentals')">Rental</button>
+<form>
+<div ng-show="vm.listingType == 'listings'">
+    Cost: $<input ng-model="vm.newListing.cost" type="number"> <br>
+    Squarefootage: <input ng-model="vm.newListing.sqft" type="number">sqft <br>
+    Location<input ng-model="vm.newListing.location" type="text"><br>
+    <button ng-click="submitListing(vm.newListing , vm.listingType)">Submit Listing</button>
+</div>
+
+<div ng-show="vm.listingType == 'rentals'">
+        Cost: $<input ng-model="vm.newListing.rent" type="number"> <br>
+        Squarefootage: <input ng-model="vm.newListing.sqft" type="number">sqft <br>
+        Location<input ng-model="vm.newListing.location" type="text"><br>
+    <button ng-click="submitListing(vm.newListing)">Submit Listing</button>
+</div>
+</form>
