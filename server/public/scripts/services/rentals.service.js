@@ -1,6 +1,7 @@
 app.service('RentalsService', ['$http', function ($http) {
     var self = this;
     self.rentals = { list: [] };
+    self.newListing = 
 
     self.getRentals = function () {
 
@@ -18,12 +19,12 @@ app.service('RentalsService', ['$http', function ($http) {
         $http({
             method: 'POST',
             url: '/rentals',
-            data:  rental
+            data: rental
         }).then(function (response) {
             console.log('response', response)
-                self.newListing.rent = 0;
-                self.newListing.sqft = 0;
-                self.newListing.city = '';
+            self.newListing.rent = 0;
+            self.newListing.sqft = 0;
+            self.newListing.city = '';
             self.getRentals()
         })
     };
